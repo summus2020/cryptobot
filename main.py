@@ -13,13 +13,13 @@ from flask_migrate import Migrate
 
 
 # CryptoInformerBot
-# TOKEN = "1742351143:AAFMkOhnIwnVcZ6P3PXrNSdSNAa3BJeJw4M"
-# URL = "https://api.telegram.org/bot1742351143:AAFMkOhnIwnVcZ6P3PXrNSdSNAa3BJeJw4M/"
+TOKEN = "1742351143:AAFMkOhnIwnVcZ6P3PXrNSdSNAa3BJeJw4M"
+URL = "https://api.telegram.org/bot1742351143:AAFMkOhnIwnVcZ6P3PXrNSdSNAa3BJeJw4M/"
 
 
 # Telebotik
-TOKEN = "1596358230:AAG2Set8-LxEoE2UZDOVq8f0crYnh3iLACw"
-URL = "https://api.telegram.org/bot1596358230:AAG2Set8-LxEoE2UZDOVq8f0crYnh3iLACw/"
+# TOKEN = "1596358230:AAG2Set8-LxEoE2UZDOVq8f0crYnh3iLACw"
+# URL = "https://api.telegram.org/bot1596358230:AAG2Set8-LxEoE2UZDOVq8f0crYnh3iLACw/"
 
 app = flask.Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:postgres@localhost:5432/postgres"
