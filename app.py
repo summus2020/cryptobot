@@ -8,8 +8,6 @@ import re
 from apscheduler.schedulers.background import BackgroundScheduler
 import atexit
 import math
-from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
 
 
 # CryptoInformerBot
@@ -22,10 +20,6 @@ URL = "https://api.telegram.org/bot1742351143:AAFMkOhnIwnVcZ6P3PXrNSdSNAa3BJeJw4
 # URL = "https://api.telegram.org/bot1596358230:AAG2Set8-LxEoE2UZDOVq8f0crYnh3iLACw/"
 
 app = flask.Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://xlhvqyldvmigns:93709ec366f14884dd2f666a007bf463a1f125c0696b3cd7f301230a85753a2a@ec2-18-214-195-34.compute-1.amazonaws.com:5432/d966buti312f0r" # "postgresql://postgres:postgres@localhost:5432/postgres"
-app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-db = SQLAlchemy(app)
-migrate = Migrate(app, db)
 
 
 import dataloader
@@ -1109,6 +1103,8 @@ def on_timer_alarm():
 
 # Initialize application
 def main():
+    models.create_db(app)
+    
     mins = min_to_nearest_hour()[0]
     secs = min_to_nearest_hour()[1]
 
@@ -1130,5 +1126,5 @@ def main():
 
 
 if __name__ == '__main__':
-    # main()
+    main()
     app.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5000)))
