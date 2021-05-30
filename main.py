@@ -22,7 +22,7 @@ URL = "https://api.telegram.org/bot1742351143:AAFMkOhnIwnVcZ6P3PXrNSdSNAa3BJeJw4
 # URL = "https://api.telegram.org/bot1596358230:AAG2Set8-LxEoE2UZDOVq8f0crYnh3iLACw/"
 
 app = flask.Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:postgres@localhost:5432/postgres"
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://xlhvqyldvmigns:93709ec366f14884dd2f666a007bf463a1f125c0696b3cd7f301230a85753a2a@ec2-18-214-195-34.compute-1.amazonaws.com:5432/d966buti312f0r" # "postgresql://postgres:postgres@localhost:5432/postgres"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
