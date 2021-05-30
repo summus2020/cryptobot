@@ -1,0 +1,51 @@
+,id,name,rank,slug,symbol
+Bitcoin,1,Bitcoin,1,bitcoin-btc,BTC
+Ethereum,2,Ethereum,2,ethereum-eth,ETH
+Binance Coin,14,Binance Coin,3,binancecoin-bnb,BNB
+XRP,3,XRP,4,xrp-xrp,XRP
+Tether USD,8,Tether USD,5,tetherusd-usdt,USDT
+Cardano,9,Cardano,6,cardano-ada,ADA
+Polkadot,71983,Polkadot,7,polkadot-dot,DOT
+Dogecoin,20,Dogecoin,8,dogecoin-doge,DOGE
+Uniswap,72821,Uniswap,9,uniswap-uni,UNI
+Terra,62458,Terra,10,terra-luna,LUNA*
+Litecoin,7,Litecoin,11,litecoin-ltc,LTC
+Bitcoin Cash,4,Bitcoin Cash,12,bitcoincash-bch,BCH
+Chainlink,59,Chainlink,13,chainlink-link,LINK
+USDC,1760,USDC,14,usdc-usdc,USDC
+Solana,68905,Solana,15,solana-sol,SOL*
+VeChain,19,VeChain,16,vechain-vet,VET
+Theta Token,96,Theta Token,17,thetatoken-theta,THETA
+Filecoin,74500,Filecoin,18,filecoin-fil,FIL
+Stellar,6,Stellar,19,stellar-xlm,XLM
+HEX,5331,HEX,20,hex-hex,HEX
+Wrapped BTC,10607,Wrapped BTC,21,wrappedbtc-wbtc,WBTC
+TRON,11,TRON,22,tron-trx,TRX
+BUSD ,14066,BUSD ,23,busd-busd,BUSD
+Monero,10,Monero,24,monero-xmr,XMR
+NEO,15,NEO,25,neo-neo,NEO
+Klaytn,63279,Klaytn,26,klaytn-klay,KLAY
+IOTA,12,IOTA,27,iota-miota,MIOTA
+EOS,5,EOS,28,eos-eos,EOS
+Cosmos,4966,Cosmos,29,cosmos-atom,ATOM
+Aave,74883,Aave,30,aave-aave,AAVE
+Bitcoin SV,4875,Bitcoin SV,31,bitcoinsv-bsv,BSV
+BitTorrent,10463,BitTorrent,32,bittorrent-btt,BTT*
+OKB,1524,OKB,33,okb-okb,OKB
+FTX Token,62569,FTX Token,34,ftxtoken-ftt,FTT**
+Tezos,18,Tezos,35,tezos-xtz,XTZ
+Crypto.com Chain,10296,Crypto.com Chain,36,cryptocomchain-cro,CRO
+Ethereum Classic,16,Ethereum Classic,37,ethereumclassic-etc,ETC
+Maker,22,Maker,38,maker-mkr,MKR
+Kusama,57612,Kusama,39,kusama-ksm,KSM
+Dai,68589,Dai,40,dai-dai,DAI
+Algorand,14585,Algorand,41,algorand-algo,ALGO
+Compound,70838,Compound,42,compound-comp,COMP**
+Avalanche,70974,Avalanche,43,avalanche-avax,AVAX
+THORChain,64725,THORChain,44,thorchain-rune,RUNE
+Huobi Token,71,Huobi Token,45,huobitoken-ht,HT
+Elrond,72208,Elrond,46,elrond-egld,EGLD
+Polygon,12606,Polygon,47,polygon-matic,MATIC
+Dash,13,Dash,48,dash-dash,DASH
+Decentraland,77,Decentraland,49,decentraland-mana,MANA
+Decred,28,Decred,50,decred-dcr,DCR
