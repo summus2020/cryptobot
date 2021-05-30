@@ -1,5 +1,7 @@
-from app import db
 import models
+
+
+db = models.db
 
 
 def user_exists(chatId):
