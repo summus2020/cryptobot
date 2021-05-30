@@ -1116,7 +1116,7 @@ def main():
     scheduler.add_job(on_timer_schedule, 'interval', hours=1, start_date=time_start)
     scheduler.start()
 
-    ALARM_SCHEDULER = bACKGROUNDsCHEDULER(DAEMON=tRUE)
+    ALARM_SCHEDULER = BackgroundScheduler(DAEMON=tRUE)
     ALARM_SCHEDULER.ADD_JOB(ON_TIMER_ALARM, "INTERVAL", MINUTES=1)
     ALARM_SCHEDULER.START()
 
