@@ -1116,9 +1116,9 @@ def main():
     scheduler.add_job(on_timer_schedule, 'interval', hours=1, start_date=time_start)
     scheduler.start()
 
-    ALARM_SCHEDULER = BackgroundScheduler(DAEMON=tRUE)
-    ALARM_SCHEDULER.ADD_JOB(ON_TIMER_ALARM, "INTERVAL", MINUTES=1)
-    ALARM_SCHEDULER.START()
+    alarm_scheduler = BackgroundScheduler(daemon=True)
+    alarm_scheduler.add_job(on_timer_alarm, "interval", minutes=1)
+    alarm_scheduler.start()
 
     # Shut down the schedulers when exiting the app
     atexit.register(lambda: scheduler.shutdown())
