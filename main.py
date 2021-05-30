@@ -30,7 +30,7 @@ migrate = Migrate(app, db)
 
 import dataloader
 import pghelper
-# import models
+import models
 
 
 df = pd.read_csv("coins.csv")
