@@ -652,9 +652,9 @@ def inquery_handler(data):
                     alarm_enter_listener[chat_id]["is_waiting"] = False
                 # print(existing_alarm["coin_symbol"],": ", existing_alarm["min_value"], " <-> ", existing_alarm["max_value"])
                 msg = "<b><u>You already have alarm for {} ({})</u>:\nYou will be informed when {} price will be: \n - under the {} usd\n - over the {} usd</b>\n\n" \
-                      "Do you want to remove it?".format(existing_alarm.coin_name, existing_alarm["coin_symbol"],
+                      "Do you want to remove it?".format(existing_alarm.coin_name, existing_alarm.coin_symbol,
                                                          existing_alarm.coin_name,
-                                                         existing_alarm.min_value, existing_alarm["max_value"])
+                                                         existing_alarm.min_value, existing_alarm.max_value)
                 send_message_replace_alarm(chat_id, coin_symbol, msg)
             else:
                 alarm_enter_listener[chat_id] = {"is_waiting": True, "min": 0, "max": 0, "symbol": coin_symbol}
