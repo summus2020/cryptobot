@@ -651,10 +651,22 @@ def inquery_handler(data):
                 if chat_id in alarm_enter_listener:
                     alarm_enter_listener[chat_id]["is_waiting"] = False
                 # print(existing_alarm["coin_symbol"],": ", existing_alarm["min_value"], " <-> ", existing_alarm["max_value"])
-                msg = "<b><u>You already have alarm for {} ({})</u>:\nYou will be informed when {} price will be: \n - under the {} usd\n - over the {} usd</b>\n\n" \
+                if existing_alarm.min_value > 0 and existing_alarm.max_value > 0:
+                    msg = "<b><u>You already have alarm for {} ({})</u>:\nYou will be informed when {} price will be: \n - under the {} usd\n - over the {} usd</b>\n\n" \
                       "Do you want to remove it?".format(existing_alarm.coin_name, existing_alarm.coin_symbol,
                                                          existing_alarm.coin_name,
                                                          existing_alarm.min_value, existing_alarm.max_value)
+                elif existing_alarm.min_value > 0 and existing_alarm.max_value == 0:
+                    msg = "<b><u>You already have alarm for {} ({})</u>:\nYou will be informed when {} price will be: \n - under the {} usd</b>\n\n" \
+                      "Do you want to remove it?".format(existing_alarm.coin_name, existing_alarm.coin_symbol,
+                                                         existing_alarm.coin_name,
+                                                         existing_alarm.min_value)
+                elif existing_alarm.min_value == 0 and existing_alarm.max_value > 0:
+                    msg = "<b><u>You already have alarm for {} ({})</u>:\nYou will be informed when {} price will be: \n - over the {} usd</b>\n\n" \
+                      "Do you want to remove it?".format(existing_alarm.coin_name, existing_alarm.coin_symbol,
+                                                         existing_alarm.coin_name,
+                                                         existing_alarm.max_value)
+
                 send_message_replace_alarm(chat_id, coin_symbol, msg)
             else:
                 alarm_enter_listener[chat_id] = {"is_waiting": True, "min": 0, "max": 0, "symbol": coin_symbol}
@@ -1104,7 +1116,7 @@ def on_timer_alarm():
 # Initialize application
 def main():
     models.create_db(app)
-    
+
     mins = min_to_nearest_hour()[0]
     secs = min_to_nearest_hour()[1]
 
