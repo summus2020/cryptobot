@@ -1008,8 +1008,8 @@ def check_for_scheduler(user):
                         currently_checked_price_for_sched[coin_symbol] = info
                     scheduled_message += " - {} ({}) price: <b>{}</b>\n".format(coin_name, coin_symbol, info[0])
             else:
-                last_send = schedule["last_send"]
-                hourly_interval = schedule["hourly_interval"]
+                last_send = schedule.last_send
+                hourly_interval = schedule.hourly_interval
                 if (current_hour - last_send) % 24 >= hourly_interval:
                     if coin_symbol in currently_checked_price_for_sched:
                         info = currently_checked_price_for_sched[coin_symbol]
