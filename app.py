@@ -248,7 +248,7 @@ def send_message_replace_schedule(chat_id, prefix):
     pref_list = prefix.split(":")
 
     sched = pghelper.get_schedule_for_coin(chat_id, pref_list[-1]);
-    if schedules is not None:
+    if sched is not None:
         # schedule = schedules[0]
         coin_name = sched.coin_name
         coin_symbol = sched.coin_symbol
