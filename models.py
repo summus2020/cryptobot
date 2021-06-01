@@ -42,7 +42,7 @@ class Schedule(db.Model):
     last_send = db.Column(db.Integer)
 
 
-    def __init__(self, chatId, isDaily, coinSymbol, coinName, timeDaily, hourlyInterval, lastSend=0):
+    def __init__(self, chatId, isDaily, coinSymbol, coinName, timeDaily, hourlyInterval, lastSend=-1):
         self.chat_id = chatId
         self.coin_symbol = coinSymbol
         self.coin_name = coinName
