@@ -1004,6 +1004,7 @@ def check_for_scheduler(user):
     current_hour = current_date.hour
     tz_delta = user.tz_delta
     scheduled_message = "<b>Scheduled info:</b>\n"
+    need_send = False
 
     schedules = pghelper.get_schedules(chat_id)
     if schedules is not None:
@@ -1019,6 +1020,7 @@ def check_for_scheduler(user):
                         info = get_sched_coin_info(coin_symbol)
                         currently_checked_price_for_sched[coin_symbol] = info
                     scheduled_message += " - {} ({}) price: <b>{}</b>\n".format(coin_name, coin_symbol, info[0])
+                    need_send = True
             else:
                 last_send = schedule.last_send
                 hourly_interval = schedule.hourly_interval
@@ -1032,8 +1034,10 @@ def check_for_scheduler(user):
                     # update last_send value in database
                     last_send_ts = math.floor(current_date.timestamp())
                     pghelper.set_scheduled_last_send(chat_id, coin_symbol, last_send_ts)
-
-        scheduled_send_price(chat_id, scheduled_message)
+                    need_send = True
+        
+        if need_send == True:
+            scheduled_send_price(chat_id, scheduled_message)
 
 
 def check_for_alarm(user):
