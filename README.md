@@ -1,6 +1,8 @@
-Telegram Bot with PostrgeSQL support to deploy on Heroku.
+<h2>Telegram Bot with PostrgeSQL support to deploy on Heroku.</h2>
 
-!!!upd: Does not work now - the connected CoinRanking API has been changed!!!
+```diff
+- upd: Does not work now - the connected CoinRanking API has been changed!!!
+```
 
 It informs user about crypto currencies' rates, history info (as a chart)
 Has "Alarm" and "Scheduler" features:
