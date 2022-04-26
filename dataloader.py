@@ -6,7 +6,7 @@ import statistics
 
 url_coins = "https://coinranking1.p.rapidapi.com/coin/"
 headers_coins = {
-    'x-rapidapi-key': "f5aac366ebmsh80e63a649457464p1b786djsn32b46ba55163",
+    'x-rapidapi-key': "<< your key here >>",
     'x-rapidapi-host': "coinranking1.p.rapidapi.com"
 }
 
@@ -14,7 +14,7 @@ url_history_base = "https://coinranking1.p.rapidapi.com/coin/"
 url_history_last = "/history/7d"
 headers_history = {
     'x-rapidapi-host': "coinranking1.p.rapidapi.com",
-    'x-rapidapi-key': "f5aac366ebmsh80e63a649457464p1b786djsn32b46ba55163"
+    'x-rapidapi-key': "<< your key here >>"
 }
 
 # history = dict()
